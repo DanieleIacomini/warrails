@@ -1,0 +1,19 @@
+.property {
+    width: 100%
+}
+
+.clan {
+    display: block; 
+    display:inline; 
+    margin: 0px auto; 
+    width: 100px; 
+    height: 100px; 
+    cursor: pointer;
+}
+
+#footer{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+}
