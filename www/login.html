@@ -47,7 +47,7 @@
                     <h1><span class="fa fa-sign-in"></span>Login</h1>
                     
                     <!-- LOGIN FORM -->
-                    <form action="login" method="post">
+                    <form name="mylogin" onSubmit="validationcheck()" action="user.html">
                         <div class="form-group">
                             <label>Email</label>
                             <input type="text" class="form-control" name="email">
@@ -57,7 +57,7 @@
                             <input type="password" class="form-control" name="password">
                         </div>
                 
-                        <button type="submit" class="btn btn-lg btn-primary">Login</button>
+                        <button type="submit" class="btn btn-lg btn-primary" onclick="validationcheck();">Login</button>
                     </form>
                 
                     <hr>
@@ -67,7 +67,28 @@
                 
                 </div>
                 
-                </div>
+                <script type="text/javascript">
+                  function validationcheck(){
+                 
+                   if (document.mylogin.email.value == "") {
+                    alert("Please Enter Email.");
+                    document.mylogin.email.focus(); 
+                   } else if (document.mylogin.password.value == "") {
+                    alert("Please Enter Password.");
+                    document.mylogin.password.focus();
+                   }
+                   else
+                    {
+                      success();
+                    }
+                  }
+
+                  
+                  function success(){
+                   window.location.href = "contact.html";
+                  }
+
+                </script>
     
     <footer id="footer"><p class = "text-center">Copyright &copy; 2019, War-Rails INC</p></footer>
     <script type="text/javascript" src="cordova.js"></script>
